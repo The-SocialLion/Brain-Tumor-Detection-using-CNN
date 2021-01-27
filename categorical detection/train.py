@@ -25,7 +25,6 @@ for i in range(classes):
     for a in images:
         try:
             image = Image.open(path + '\\'+ a)
-            image=ImageOps.grayscale(image)
             image = image.resize((64,64))
             image = np.array(image)
             data.append(image)
